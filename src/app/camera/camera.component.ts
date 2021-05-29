@@ -27,6 +27,7 @@ export class CameraComponent implements OnInit {
       .then((mediaDevices: MediaDeviceInfo[]) => {
         this.isCameraExist = mediaDevices && mediaDevices.length > 0;
       });
+      this.changeWebCame(false);
   }
 
   takeSnapshot(): void {
@@ -34,7 +35,8 @@ export class CameraComponent implements OnInit {
   }
 
   onOffWebCame() {
-    this.showWebcam = !this.showWebcam;
+    // this.showWebcam = !this.showWebcam;
+    window.location.reload()
   }
 
   handleInitError(error: WebcamInitError) {
@@ -44,6 +46,7 @@ export class CameraComponent implements OnInit {
   changeWebCame(directionOrDeviceId: boolean | string) {
     this.nextWebcam.next(directionOrDeviceId);
   }
+
 
   handleImage(webcamImage: WebcamImage) {
     this.getPicture.emit(webcamImage);
@@ -57,4 +60,6 @@ export class CameraComponent implements OnInit {
   get nextWebcamObservable(): Observable<boolean | string> {
     return this.nextWebcam.asObservable();
   }
+
+
 }
