@@ -7,17 +7,23 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
+import { CameraComponent } from './camera/camera.component';
+
+
+import { WebcamModule } from 'ngx-webcam';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CameraComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SidebarModule,
-    ButtonModule
+    ButtonModule,
+    WebcamModule
   ],
   providers: [],
   bootstrap: [AppComponent]
