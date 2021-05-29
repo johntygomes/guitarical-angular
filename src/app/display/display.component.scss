@@ -13,6 +13,14 @@
         left: 2px;
         z-index: 10;
     }
+    #ad {
+        position: relative;
+        top: 20px;
+    }
+    #ad img {
+        height: 100px;
+        width: 200px;
+    }
     #mainBox img {
         display: block;
         margin: auto;
@@ -34,6 +42,14 @@
         top: -330px;
         left: 2px;
         z-index: 10;
+    }
+    #ad {
+        position: relative;
+        top: 100px;
+    }
+    #ad img {
+        height: 200px;
+        width: 600px;
     }
     #mainBox img {
         display: block;
