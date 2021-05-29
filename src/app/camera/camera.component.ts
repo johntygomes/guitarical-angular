@@ -12,7 +12,6 @@ export class CameraComponent implements OnInit {
   @Output() getPicture = new EventEmitter<WebcamImage>();
   showWebcam = true;
   isCameraExist = true;
-  public facingMode: string = 'user';
 
   errors: WebcamInitError[] = [];
 
@@ -28,7 +27,8 @@ export class CameraComponent implements OnInit {
       .then((mediaDevices: MediaDeviceInfo[]) => {
         this.isCameraExist = mediaDevices && mediaDevices.length > 0;
       });
-      this.changeWebCame(true);
+      this.changeWebCame('user')
+      
   }
 
   takeSnapshot(): void {
@@ -62,15 +62,6 @@ export class CameraComponent implements OnInit {
 
   get nextWebcamObservable(): Observable<boolean | string> {
     return this.nextWebcam.asObservable();
-  }
-
-  public get videoOptions(): MediaTrackConstraints {
-    const result: MediaTrackConstraints = {};
-    if (this.facingMode && this.facingMode !== '') {
-      result.facingMode = { ideal: this.facingMode };
-    }
-
-    return result;
   }
 
 
