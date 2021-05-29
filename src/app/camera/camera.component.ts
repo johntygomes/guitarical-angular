@@ -30,8 +30,9 @@ export class CameraComponent implements OnInit {
       .then((mediaDevices: MediaDeviceInfo[]) => {
         this.isCameraExist = mediaDevices && mediaDevices.length > 0;
       });
+      
+      
   }
-
   takeSnapshot(): void {
     this.trigger.next();
     this.router.navigate(['/display']);
@@ -39,6 +40,8 @@ export class CameraComponent implements OnInit {
 
   onOffWebCame() {
     this.showWebcam = !this.showWebcam;
+    window.location.reload()
+
   }
 
   handleInitError(error: WebcamInitError) {
