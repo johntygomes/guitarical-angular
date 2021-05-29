@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { WebcamImage } from 'ngx-webcam';
+import {SharedService} from './shared/shared.service'
 
 
 @Component({
@@ -17,17 +18,5 @@ import { WebcamImage } from 'ngx-webcam';
 })
 export class AppComponent {
   title = 'guitarical';
-  visibleSidebar1;
-  webcamImage: WebcamImage = null;
 
-  handleImage(webcamImage: WebcamImage) {
-    this.webcamImage = webcamImage;
-  }
-
-
-  constructor(private primengConfig: PrimeNGConfig) {}
-
-  ngOnInit() {
-    this.primengConfig.ripple = true;
-  }
 }

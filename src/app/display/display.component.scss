@@ -1,0 +1,42 @@
+@media (min-width:320px) {
+    #box {
+        margin: auto;
+        height: 600px;
+        width: 270px;
+        position: relative;
+    }
+    #clickedPic {
+        height: 210px;
+        width: 265px;
+        position: relative;
+        top: -330px;
+        left: 2px;
+        z-index: 10;
+    }
+    #mainBox img {
+        display: block;
+        margin: auto;
+    }
+}
+
+@media (min-width:700px) {
+    #box {
+        margin: auto;
+        margin-top: 30px;
+        height: 600px;
+        width: 270px;
+        position: relative;
+    }
+    #clickedPic {
+        height: 210px;
+        width: 265px;
+        position: relative;
+        top: -330px;
+        left: 2px;
+        z-index: 10;
+    }
+    #mainBox img {
+        display: block;
+        margin-left: 15%;
+    }
+}
