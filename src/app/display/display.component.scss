@@ -1,58 +1,68 @@
 @media (min-width:320px) {
     #box {
-        margin: auto;
-        height: 600px;
-        width: 270px;
+        width: 50%;
         position: relative;
-    }
-    #clickedPic {
-        height: 210px;
-        width: 265px;
-        position: relative;
-        top: -330px;
-        left: 2px;
-        z-index: 10;
     }
     #ad {
-        position: relative;
-        top: 20px;
+        width: 50%;
+        position: absolute;
+        top: 40%;
     }
-    #ad img {
-        height: 100px;
-        width: 200px;
+    #clickedpic {
+        position: absolute;
+        top: 45%;
+        right: 50%;
+        width: 50%;
+        height: 40%;
+        box-shadow: 0 0 8px 8px white inset;
     }
-    #mainBox img {
-        display: block;
-        margin: auto;
+    #downloadbtn {
+        position: absolute;
+        width: 10%;
+        top: 60%;
+    }
+    #textnexttodownload {
+        position: absolute;
+        width: 30%;
+        top: 60%;
+        right: 5%;
+        font-size: 1rem;
+        line-height: 1;
     }
 }
 
 @media (min-width:700px) {
     #box {
-        margin: auto;
-        margin-top: 30px;
-        height: 600px;
-        width: 270px;
+        width: 30%;
+        height: 700px;
         position: relative;
-    }
-    #clickedPic {
-        height: 210px;
-        width: 265px;
-        position: relative;
-        top: -330px;
-        left: 2px;
-        z-index: 10;
     }
     #ad {
-        position: relative;
-        top: 100px;
+        width: 50%;
+        position: absolute;
+        top: 40%;
     }
-    #ad img {
-        height: 200px;
-        width: 600px;
+    #clickedpic {
+        position: absolute;
+        top: 45%;
+        right: 70%;
+        width: 30%;
+        height: 35%;
+        box-shadow: 0 0 8px 8px white inset;
     }
-    #mainBox img {
-        display: block;
-        margin-left: 15%;
+    #downloadbtn {
+        position: absolute;
+        width: 10%;
+        height: 100px;
+        top: 65%;
+        left: 35%;
+    }
+    #textnexttodownload {
+        position: absolute;
+        width: 50%;
+        top: 70%;
+        right: 5%;
+        font-size: 1.7rem;
+        line-height: 1;
     }
 }

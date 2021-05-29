@@ -6,14 +6,14 @@
         </div>
         <div class="btn-group">
             <input type="image" src="assets/images/save.png" (click)="takeSnapshot()">
-            <input type="image" src="assets/images/retry.png" (click)="changeWebCame(true)">
-            <!-- <button class="button" (click)="onOffWebCame()">Switch camera</button> -->
+            <!-- <input type="image " src="assets/images/retry.png " (click)="changeWebCame(true) "> -->
+            <!-- <button class="button " (click)="onOffWebCame() ">Switch camera</button> -->
         </div>
     </div>
 
 
 
-    <div *ngIf="errors.length > 0">
+    <div *ngIf="errors.length> 0">
         <h4>Error Messages:</h4>
         <ul *ngFor="let error of errors">
             <li>{{ error | json }}</li>
