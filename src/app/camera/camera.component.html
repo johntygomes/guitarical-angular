@@ -1,12 +1,16 @@
-<h2>Camera</h2>
 <div *ngIf="isCameraExist; else noCameraExist">
     <div style="text-align:center">
         <webcam [height]="500" [width]="1000" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam" [switchCamera]="nextWebcamObservable"></webcam>
 
-        <div class="btn-group">
-            <input type="image" class="saveRetryBtns" src="assets/images/save.png" (click)="takeSnapshot()">&nbsp;
-            <!-- <button class="button" (click)="changeWebCame(true)">Toggle Camera</button> -->
-            <input type="image" class="saveRetryBtns" src="assets/images/retry.png" (click)="onOffWebCame()">
+        <div class="slogan">
+            <span>Give your best shot for the ad.</span>
+        </div>
+        <div id="btns">
+            <div class="btn-group">
+                <input type="image" class="saveRetryBtns" src="assets/images/save.png" (click)="takeSnapshot()">&nbsp;
+                <!-- <button class="button" (click)="changeWebCame(true)">Toggle Camera</button> -->
+                <input type="image" class="saveRetryBtns" src="assets/images/retry.png" (click)="onOffWebCame()">
+            </div>
         </div>
 
     </div>
