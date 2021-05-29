@@ -2,7 +2,7 @@
     <div style="text-align:center">
         <webcam [height]="500" [width]="1000" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam" [switchCamera]="nextWebcamObservable"></webcam>
         <div class="sloganContainer">
-            <span id="slogan">Give your best shot for the add</span>
+            <span id="slogan">Give your best shot for the ad</span>
         </div>
         <div class="btn-group">
             <input type="image" src="assets/images/save.png" (click)="takeSnapshot()">

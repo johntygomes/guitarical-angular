@@ -12,7 +12,9 @@ export class DisplayComponent implements OnInit {
   constructor(private shared: SharedService) { }
 
   ngOnInit(): void {
-    this.photoUrl = this.shared.getMessage();
+    this.photoUrl = this.shared.getMessage();  
+    console.log(this.photoUrl) 
   }
+  
 
 }
