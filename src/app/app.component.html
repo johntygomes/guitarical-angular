@@ -6,4 +6,8 @@
 
 <p-button type="button" (click)="visibleSidebar1 = true" icon="pi pi-arrow-right"></p-button>
 
-<app-camera></app-camera>
+<app-camera (getPicture)="handleImage($event)"></app-camera>
+
+<div class="webcam-image" *ngIf="webcamImage">
+    <img [src]="webcamImage.imageAsDataUrl" />
+</div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { WebcamImage } from 'ngx-webcam';
 
 
 @Component({
@@ -17,6 +18,11 @@ import { PrimeNGConfig } from 'primeng/api';
 export class AppComponent {
   title = 'guitarical';
   visibleSidebar1;
+  webcamImage: WebcamImage = null;
+
+  handleImage(webcamImage: WebcamImage) {
+    this.webcamImage = webcamImage;
+  }
 
 
   constructor(private primengConfig: PrimeNGConfig) {}
