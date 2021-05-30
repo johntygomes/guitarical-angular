@@ -49,7 +49,7 @@ export class CameraComponent implements OnInit {
   }
 
   changeWebCame(directionOrDeviceId: boolean | string) {
-    this.nextWebcam.next(directionOrDeviceId);
+    // this.nextWebcam.next(directionOrDeviceId);
   }
 
   handleImage(webcamImage: WebcamImage) {
