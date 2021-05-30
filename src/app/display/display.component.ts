@@ -49,8 +49,8 @@ export class DisplayComponent implements OnInit {
     setTimeout(() => {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
-    }, 1500);
-    await this.sleep(2000);
+    }, 500);
+    await this.sleep(500);
     let docElem = document.getElementById('combinedImg');
       html2canvas(docElem).then((canvas) => {
         let generatedImage = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
