@@ -44,21 +44,22 @@
 
 @media (min-width:700px) {
     #box {
-        width: 30%;
+        width: 27%;
+        height: 650px;
         position: relative;
-        left: 20%;
+        left: 5%;
     }
     #ad {
-        width: 70%;
+        width: 60%;
         position: absolute;
         top: 30%;
-        left: 50%;
+        left: 32%;
     }
     #clickedpic {
         position: absolute;
         top: 45%;
-        right: 50.2%;
-        width: 29.2%;
+        right: 68.2%;
+        width: 26.5%;
         height: 40%;
         box-shadow: 0 0 8px 8px white inset;
     }
