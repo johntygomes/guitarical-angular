@@ -31,21 +31,39 @@
         top: 136.5%;
         right: 14%;
         font-size: 1rem;
+        font-weight: bold;
         line-height: 1;
     }
     #retrybtn {
+        display: none;
         position: absolute;
         width: 30%;
         top: 147%;
         right: 55%;
+    }
+    #letspledge {
+        position: absolute;
+        top: 150%;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        color: red;
+    }
+    #tobaccokills {
+        position: absolute;
+        top: 155%;
+        width: 100%;
+        text-align: center;
     }
     #roadcastfooter {
         width: 100%;
         text-align: center;
         font-size: 1rem;
         position: absolute;
-        top: 160%;
+        top: 180%;
         right: 2%;
+        margin-bottom: 2rem;
+        font-weight: bold;
     }
 }
 
@@ -73,14 +91,14 @@
     #downloadbtn {
         position: absolute;
         width: 10%;
-        top: 60%;
+        top: 65%;
         right: 55%;
     }
     #textnexttodownload {
         position: absolute;
         width: 40%;
-        top: 65%;
-        right: 15%;
+        top: 73%;
+        right: 14%;
         font-size: 2rem;
         line-height: 1;
     }
@@ -90,12 +108,29 @@
         top: 80%;
         right: 50%;
     }
+    #letspledge {
+        position: absolute;
+        top: 97%;
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: red;
+    }
+    #tobaccokills {
+        position: absolute;
+        top: 103%;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
     #roadcastfooter {
         width: 100%;
         text-align: center;
         font-size: 1.5rem;
         position: absolute;
-        top: 105%;
+        top: 120%;
         right: 0%;
     }
     body {
