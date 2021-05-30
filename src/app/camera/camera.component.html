@@ -1,8 +1,10 @@
 <div *ngIf="isCameraExist; else noCameraExist">
     <div style="text-align:center">
-        <webcam [height]="500" [width]="1000" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam>
+        <!-- <webcam [height]="500" [width]="1000" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam> -->
+        <webcam height="480" [width]="1000">
+        </webcam>
         <div class="sloganContainer">
-            <span id="slogan">Give your best shot8 for the ad</span>
+            <span id="slogan">Give your best shot9 for the ad</span>
         </div>
         <div class="btn-group">
             <input type="image" src="assets/images/save.png" (click)="takeSnapshot()">
