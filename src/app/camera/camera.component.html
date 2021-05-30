@@ -1,6 +1,6 @@
 <div *ngIf="isCameraExist; else noCameraExist">
     <div style="text-align:center">
-        <webcam [height]="500" [width]="1000" [allowCameraSwitch]="false" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam" [switchCamera]="switchCameraValue"></webcam>
+        <webcam [height]="500" [width]="1000" [allowCameraSwitch]="false" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam" [switchCamera]="true"></webcam>
         <div class="sloganContainer">
             <span id="slogan">Give your best shot4 for the ad</span>
         </div>
