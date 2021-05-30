@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,7 +30,8 @@ import {SharedService} from './shared/shared.service';
     SidebarModule,
     ButtonModule,
     WebcamModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { WebcamImage, WebcamInitError, WebcamUtil } from 'ngx-webcam';
+import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import {SharedService} from '../shared/shared.service'
@@ -26,7 +27,8 @@ export class CameraComponent implements OnInit {
 
 
   constructor(private router: Router,
-              private shared:SharedService) { }
+              private shared:SharedService,
+              private http: HttpClient) { }
 
 
   ngOnInit(): void {
@@ -56,10 +58,17 @@ export class CameraComponent implements OnInit {
     this.nextWebcam.next(directionOrDeviceId);
   }
 
-  handleImage(webcamImage: WebcamImage) {
+  async handleImage(webcamImage: WebcamImage) {
     this.getPicture.emit(webcamImage);
     this.showWebcam = true;
     this.shared.setMessage(webcamImage.imageAsDataUrl);
+    console.log(webcamImage.imageAsDataUrl)
+
+    // this.http.post('http://127.0.0.1:8000/api/person-create/', {'img_url':webcamImage.imageAsDataUrl}).subscribe(
+    this.http.post('https://no-smoking-backend.herokuapp.com/api/person-create/', {'img_url':webcamImage.imageAsDataUrl}).subscribe(
+      (response) => {console.log(response)},
+      (error) => console.log(error),
+    )
   }
 
   get triggerObservable(): Observable<void> {
