@@ -31,7 +31,7 @@ export class CameraComponent implements OnInit {
       .then((mediaDevices: MediaDeviceInfo[]) => {
         this.isCameraExist = mediaDevices && mediaDevices.length > 0;
       });
-      this.changeWebCame(true);
+      // this.changeWebCame(true);
       
   }
   takeSnapshot(): void {
