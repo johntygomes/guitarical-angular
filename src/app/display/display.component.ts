@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SharedService} from '../shared/shared.service'
 import html2canvas from 'html2canvas';
-import { from } from 'rxjs'
-import { concatMap } from 'rxjs/operators'
+import { Router} from '@angular/router';
 
 
 
@@ -14,7 +13,8 @@ import { concatMap } from 'rxjs/operators'
 export class DisplayComponent implements OnInit {
   photoUrl: string;
   
-  constructor(private shared: SharedService) { }
+  constructor(private shared: SharedService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.photoUrl = this.shared.getMessage();  
@@ -33,6 +33,10 @@ export class DisplayComponent implements OnInit {
         // at this point, image has been downloaded, then call the next download.
         // this._download(index + 1, array)
       });
+  }
+
+  retry(): void {
+    this.router.navigate(['']);
   }
 
 

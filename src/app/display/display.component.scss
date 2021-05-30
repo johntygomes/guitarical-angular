@@ -21,24 +21,30 @@
     }
     #downloadbtn {
         position: absolute;
-        width: 10%;
+        width: 20%;
         top: 130%;
         right: 65%;
     }
     #textnexttodownload {
         position: absolute;
         width: 50%;
-        top: 132.5%;
+        top: 136.5%;
         right: 14%;
         font-size: 1rem;
         line-height: 1;
+    }
+    #retrybtn {
+        position: absolute;
+        width: 30%;
+        top: 147%;
+        right: 55%;
     }
     #roadcastfooter {
         width: 100%;
         text-align: center;
         font-size: 1rem;
         position: absolute;
-        top: 140%;
+        top: 160%;
         right: 2%;
     }
 }
@@ -77,6 +83,12 @@
         right: 12%;
         font-size: 2rem;
         line-height: 1;
+    }
+    #retrybtn {
+        position: absolute;
+        width: 15%;
+        top: 80%;
+        right: 50%;
     }
     #roadcastfooter {
         width: 100%;
