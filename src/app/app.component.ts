@@ -20,12 +20,10 @@ export class AppComponent {
     this._router.events.subscribe((routerEvent: Event) => {
         if(routerEvent instanceof NavigationStart){
           this.showLoadingIndicator = true;
-          console.log('showloadintrue');
         }
 
         if(routerEvent instanceof NavigationEnd){
           this.showLoadingIndicator = false;
-          console.log('showloadinfa');
         }
     });
   }
