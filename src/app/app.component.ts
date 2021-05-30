@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { PrimeNGConfig } from 'primeng/api';
-import { WebcamImage } from 'ngx-webcam';
-import {SharedService} from './shared/shared.service'
-
+import {Event, Router, NavigationStart, NavigationEnd} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +14,20 @@ import {SharedService} from './shared/shared.service'
 
 })
 export class AppComponent {
-  title = 'guitarical';
+  // title = 'guitarical';
+  showLoadingIndicator = true;
+  constructor(private _router: Router){
+    this._router.events.subscribe((routerEvent: Event) => {
+        if(routerEvent instanceof NavigationStart){
+          this.showLoadingIndicator = true;
+          console.log('showloadintrue');
+        }
+
+        if(routerEvent instanceof NavigationEnd){
+          this.showLoadingIndicator = false;
+          console.log('showloadinfa');
+        }
+    });
+  }
 
 }

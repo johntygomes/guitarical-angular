@@ -18,7 +18,7 @@ export class DisplayComponent implements OnInit {
 
   ngOnInit(): void {
     this.photoUrl = this.shared.getMessage();  
-    console.log(this.photoUrl)
+    // console.log(this.photoUrl)
 
   }
 
