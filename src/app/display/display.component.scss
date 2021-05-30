@@ -2,77 +2,86 @@
     #box {
         width: 50%;
         position: relative;
+        left: 20%;
     }
     #ad {
-        width: 50%;
+        width: 84%;
         position: absolute;
-        top: 40%;
+        top: 90%;
+        left: 5%;
     }
     #clickedpic {
         position: absolute;
         top: 45%;
-        right: 50%;
-        width: 50%;
+        right: 30.2%;
+        width: 49.2%;
         height: 40%;
         box-shadow: 0 0 8px 8px white inset;
     }
     #downloadbtn {
         position: absolute;
         width: 10%;
-        top: 60%;
+        top: 113%;
+        right: 65%;
     }
     #textnexttodownload {
         position: absolute;
-        width: 30%;
-        top: 60%;
-        right: 5%;
+        width: 50%;
+        top: 115.5%;
+        right: 14%;
         font-size: 1rem;
         line-height: 1;
     }
     #roadcastfooter {
         width: 100%;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        position: absolute;
+        top: 123%;
+        right: 2%;
     }
 }
 
 @media (min-width:700px) {
     #box {
-        width: 30%;
-        height: 700px;
+        width: 50%;
         position: relative;
+        left: 10%;
     }
     #ad {
-        width: 50%;
+        width: 80%;
         position: absolute;
-        top: 40%;
+        top: 30%;
+        left: 60%;
     }
     #clickedpic {
         position: absolute;
         top: 45%;
-        right: 70%;
-        width: 30%;
-        height: 35%;
+        right: 40.2%;
+        width: 49.2%;
+        height: 40%;
         box-shadow: 0 0 8px 8px white inset;
     }
     #downloadbtn {
         position: absolute;
         width: 10%;
-        height: 100px;
-        top: 65%;
-        left: 35%;
+        top: 113%;
+        right: 77%;
     }
     #textnexttodownload {
         position: absolute;
-        width: 50%;
-        top: 70%;
-        right: 5%;
-        font-size: 1.7rem;
+        width: 40%;
+        top: 115%;
+        right: 34%;
+        font-size: 1rem;
         line-height: 1;
     }
     #roadcastfooter {
-        font-size: 2rem;
-        position: relative;
-        bottom: 5%;
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        position: absolute;
+        top: 105%;
+        right: inherit;
     }
 }
