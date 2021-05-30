@@ -20,6 +20,9 @@ export class CameraComponent implements OnInit {
   // webcam snapshot trigger
   private trigger: Subject<void> = new Subject<void>();
   private nextWebcam: Subject<boolean | string> = new Subject<boolean | string>();
+  public videoOptions: MediaTrackConstraints = {
+    facingMode: { ideal: 'user' }
+  };
 
 
   constructor(private router: Router,
