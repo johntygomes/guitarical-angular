@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {SharedService} from '../shared/shared.service'
 import html2canvas from 'html2canvas';
 import { Router} from '@angular/router';
+import { NgxSpinnerService } from "ngx-spinner";
 
 
 
@@ -14,7 +15,8 @@ export class DisplayComponent implements OnInit {
   photoUrl: string;
   
   constructor(private shared: SharedService,
-              private router: Router) { }
+              private router: Router,
+              private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
     this.photoUrl = this.shared.getMessage();  
@@ -22,7 +24,33 @@ export class DisplayComponent implements OnInit {
 
   }
 
-  public downloadDivs() {
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+  async demo() {
+    console.log('Taking a break...');
+    await this.sleep(2000);
+    console.log('Two seconds later, showing sleep in a loop...');
+  
+    // Sleep in loop
+    for (let i = 0; i < 5; i++) {
+      if (i === 3)
+        await this.sleep(2000);
+      console.log(i);
+    }
+  }
+  
+
+  public async downloadDivs() {
+    window.scroll(0,0);
+    this.spinner.show();
+
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 1500);
+    await this.sleep(2000);
     let docElem = document.getElementById('combinedImg');
       html2canvas(docElem).then((canvas) => {
         let generatedImage = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
