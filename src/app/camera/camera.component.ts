@@ -13,6 +13,7 @@ export class CameraComponent implements OnInit {
   @Output() getPicture = new EventEmitter<WebcamImage>();
   showWebcam = true;
   isCameraExist = true;
+  switchCameraValue=true;
 
   errors: WebcamInitError[] = [];
 
