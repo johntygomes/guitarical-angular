@@ -12,6 +12,7 @@ import { ButtonModule } from 'primeng/button';
 import { WebcamModule } from 'ngx-webcam';
 import { DisplayComponent } from './display/display.component';
 import { CameraComponent } from './camera/camera.component';
+import { FormsModule } from '@angular/forms';
 
 import {SharedService} from './shared/shared.service';
 
@@ -27,7 +28,8 @@ import {SharedService} from './shared/shared.service';
     BrowserAnimationsModule,
     SidebarModule,
     ButtonModule,
-    WebcamModule
+    WebcamModule,
+    FormsModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]
